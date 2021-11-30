@@ -72,7 +72,8 @@ export default class App extends Vue {
       if (fakePercent >= 100) {
         clearInterval(intervalToFake)
         this.saving = false
-
+        this.percent = 0
+        this.show = false
         const iframe = "<img alt='' style='box-shadow: 0 4px 20px 0 rgb(255 255 255 / 20%); max-width: 80vw; height: auto' src='" + e.data?.base64 + "' />"
         const NewWindow = window.open()
         if (NewWindow) {
@@ -85,10 +86,9 @@ export default class App extends Vue {
           NewWindow.document.body.style.background = "#0e0e0e"
           NewWindow.document.close()
         }
-        this.show = false
-        this.percent = 0
+      } else {
+        this.percent = fakePercent++
       }
-      this.percent = fakePercent++
     }, 100)
   }
 }
