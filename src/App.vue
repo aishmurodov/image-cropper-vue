@@ -26,7 +26,7 @@ import ImageCropper from "@/ImageCropper/ImageCropper.vue";
 import Loader from "@/ImageCropper/components/Loader/index.vue";
 
 import "./index.scss"
-import { ImageCropperMode } from './ImageCropper/interfaces/ImageCropperInterface';
+import { ImageCropperMode } from '@/ImageCropper/interfaces/ImageCropperInterface';
 import ImageCropperCloseEventInterface from "@/ImageCropper/interfaces/ImageCropperCloseEventInterface";
 
 @Component({
